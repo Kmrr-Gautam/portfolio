@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gautam Kumar | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fira Code', monospace;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(270deg, #ff9a9e, #fad0c4, #ffd1ff, #9be7ff, #89f7fe);
+            background-size: 1800% 1800%;
+            animation: gradient-animation 18s ease infinite;
+            min-height: 100vh;
+            overflow: hidden; /* Prevents scrollbars due to large gradient animation */
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        main {
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
+            padding: 2em;
+            position: relative;
+            z-index: 1; /* Ensure content is above translucent corners */
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 100vh; /* Limit height to viewport */
+            margin: 0 auto; /* Center horizontally */
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.9); /* Translucent white */
+            padding: 2em;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2em;
+            text-align: left; /* Adjust text alignment */
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #0073e6;
+            margin-bottom: 1em;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background-color: #0073e6;
+            display: block;
+            margin: 0.5em auto 0;
+            border-radius: 2px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1em;
+            text-align: left; /* Adjust text alignment */
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #333; /* Ensure text color stands out */
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #005bb5;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1em;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icons {
+            margin-top: 1em;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .social-icons a img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.1); /* Example of hover effect */
+        }
+
+        /* Translucent corners */
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+            background: rgba(255, 255, 255, 0.8); /* Adjust opacity here */
+            z-index: 0; /* Ensure it's behind the content */
+        }
+
+        body::before {
+            border-radius: 0 0 0 100%;
+        }
+
+        body::after {
+            border-radius: 0 0 100% 0;
+            left: auto;
+            right: 0;
+            border-left: none; /* Ensure no border overlaps */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            section {
+                padding: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="Portfolio">
+            <h2>Portfolio</h2>
+            <img src="profilepic.jpg" alt="Profile Picture" class="profile-pic">
+            <ul>
+                <li>Name: Gautam Kumar</li>
+                <li>Address: Delhi, India</li>
+                <li>Currently studying at Galgotias University, BCA</li>
+            </ul>
+            <a href="resume.pdf" download="resume.pdf" class="download-btn">📥 Download Resume</a>
+</section>
+
+<style>
+    .download-btn {
+        display: inline-block;
+        padding: 8px 15px; /* Smaller padding */
+        font-size: 14px; /* Smaller text */
+        font-weight: bold;
+        color: white;
+        background-color: #ff4081; /* Cute pinkish color */
+        border: none;
+        border-radius: 20px; /* Rounded shape */
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        margin-top: 10px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    }
+
+    .download-btn:hover {
+        background-color: #e91e63; /* Darker pink on hover */
+        transform: scale(1.05); /* Slight zoom effect */
+    }
+</style>
+        </section>
+        <section id="resume">
+            <h2>About me</h2>
+            <p>I am Gautam Kumar, a 2nd-year BCA (Hons) student and a dedicated research enthusiast at Galgotias University. My passion lies in the world of computers, where I explore the limitless possibilities of coding, artificial intelligence, and machine learning.</p>
+            <p>I am also a problem solver who enjoys competitive programming and hackathons. My research interests span deep learning, data science, and automation, where I aim to develop impactful solutions that bridge technology and human advancement.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>10th - MATA SHIV DEVI SENIOR SECONDARY SCHOOL , DELHI (CBSE)</li>
+                <li>12th - MATA SHIV DEVI SENIOR SECONDARY SCHOOL , DELHI (CBSE)</li>
+                <li>Bachelor's Degree (BCA Hons) - Galgotias University (GREATER NOIDA) (Ongoing)</li>
+            </ul>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <h3>Web Design (UI/UX)</h3>
+            <ul>
+                <li>Figma</li>
+                <li>Wordpress</li>
+                <li>Wix</li>
+            </ul>
+            <h3>Full-Stack Web Dev</h3>
+            <ul>
+                <li>Html</li>
+                <li>Css</li>
+                <li>Js</li>
+            </ul>
+            <h3>Data Analytics</h3>
+            <ul>
+                <li>Python</li>
+                <li>NumPy</li>
+                <li>Pandas</li>
+            </ul>
+            <h3>Artificial Intelligence</h3>
+            <ul>
+                <li>TensorFlow</li>
+                <li>OpenCV</li>
+            </ul>
+            <h3>Other Skills</h3>
+            <ul>
+                <li>C</li>
+                <li>Python</li>
+                <li>SQL</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>Portfolio using HTML, CSS, and JS</li>
+                <li>Object Detection Model using Python & TensorFlow</li>
+                <li>Voice Assistant using Python (BeautifulSoup, Speech Recognition, etc.)</li>
+                <li>Voting System using Java & Java GUI</li>
+                <li>Commercial App Downloading Webpage using HTML, CSS, JS</li>
+                <li>Scientific Calculator using HTML, CSS, JS</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="social-icons">
+                <a href="mailto:kmrr.gautam@gmail.com" target="_blank"><img src="gmail.png" alt="Gmail"></a>
+                <a href="https://www.linkedin.com/in/kmrrgautam/" target="_blank"><img src="linkedin.png" alt=""></a>
+                <a href="https://www.instagram.com/kmrr.gautam/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
